@@ -75,8 +75,8 @@ def combination(n, k):
         return int(result)
 
 
-def stirling_1(n, k):
-    """ Recursive function calculating Stirling numbers of the first kind """
+def stirling_2(n, k):
+    """ Recursive function calculating Stirling numbers of the second kind """
     if k > n:
         return None
     if n == k:
@@ -84,4 +84,4 @@ def stirling_1(n, k):
     if k == 0:
         return 0
     else:
-        return stirling_1(n-1, k-1) + k * stirling_1(n-1, k)
+        return stirling_2(n-1, k-1) + k * stirling_2(n-1, k)
