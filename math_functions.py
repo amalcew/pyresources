@@ -73,3 +73,15 @@ def combination(n, k):
     if n >= k:
         result = permutation(n)/(permutation(k)*permutation(n-k))
         return int(result)
+
+
+def stirling_1(n, k):
+    """ Recursive function calculating Stirling numbers of the first kind """
+    if k > n:
+        return None
+    if n == k:
+        return 1
+    if k == 0:
+        return 0
+    else:
+        return stirling_1(n-1, k-1) + k * stirling_1(n-1, k)
