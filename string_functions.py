@@ -1,9 +1,9 @@
 # Module with various utilities to help with string manipulations
-def palindrome(word):
+def is_palindrome(word):
     if str(word) == reverse_word(word):
-        print("palindrome = true")
+        return True
     else:
-        print("palindrome = false")
+        return False
 
 
 def reverse_word(string):
