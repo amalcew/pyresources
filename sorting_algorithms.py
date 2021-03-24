@@ -1,3 +1,6 @@
+import random
+
+
 def bubble_sort(lst):
     for i in range(0, len(lst)-1):
         for j in range(0, len(lst)-1):
@@ -87,3 +90,19 @@ def merge_sort(lst):
             j = j+1
             k = k+1
 
+
+def quick_sort(lst, first_elem, last_elem):
+    if first_elem >= last_elem:
+        return
+    i, j = first_elem, last_elem
+    pivot = lst[random.randint(first_elem, last_elem)]
+    while i <= j:
+        while lst[i] < pivot:
+            i += 1
+        while lst[j] > pivot:
+            j -= 1
+        if i <= j:
+            lst[i], lst[j] = lst[j], lst[i]
+            i, j = i + 1, j - 1
+    quick_sort(lst, first_elem, j)
+    quick_sort(lst, i, last_elem)

@@ -1,3 +1,12 @@
+def median(array):
+    sorted_array = sorted(array)
+    index = (len(array) - 1) // 2
+    if len(array) % 2:
+        return sorted_array[index]
+    else:
+        return (sorted_array[index] + sorted_array[index + 1])/2.0
+
+
 # Module with various utilities to help in mathematics/programming
 def greatest_common_divisor(a, b):
     if b > a:
