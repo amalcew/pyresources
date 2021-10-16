@@ -1,4 +1,3 @@
-# Module with various utilities to help with string manipulations
 def is_palindrome(word):
     if str(word) == reverse_word(word):
         return True

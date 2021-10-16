@@ -1,4 +1,3 @@
-# Module with various utilities to help with other tasks
 import ssl
 import os
 

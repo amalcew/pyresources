@@ -1,4 +1,3 @@
-# Module with various utilities to help with web manipulations
 import ssl
 import os
 

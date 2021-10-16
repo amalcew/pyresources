@@ -1,7 +1,6 @@
-# Module with various utilities to help with file operations
 def convert_to_list(file):
     file = open(file, encoding='utf-8').readlines()
-    if not "\n" in file[-1]:
+    if "\n" not in file[-1]:
         file[-1] = file[-1] + "\n"
     file = [w[:-1] for w in file]
     return file

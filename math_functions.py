@@ -7,7 +7,6 @@ def median(array):
         return (sorted_array[index] + sorted_array[index + 1])/2.0
 
 
-# Module with various utilities to help in mathematics/programming
 def greatest_common_divisor(a, b):
     if b > a:
         return greatest_common_divisor(b, a)

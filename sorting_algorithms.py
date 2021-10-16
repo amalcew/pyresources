@@ -27,24 +27,23 @@ def insertion_sort(lst):
         lst[j + 1] = key
 
 
-def heapify(lst, n, index):
-    largest = index
-    child_left = 2 * index + 1
-    child_right = 2 * index + 2
-
-    # check if left child of root exists and is greater than root
-    if child_left < n and lst[largest] < lst[child_left]:
-        largest = child_left
-    # check if right child of root exists and is greater than root
-    if child_right < n and lst[largest] < lst[child_right]:
-        largest = child_right
-    # swap root and continue process if root is not largest
-    if largest != index:
-        lst[index], lst[largest] = lst[largest], lst[index]  # swap
-        heapify(lst, n, largest)
-
-
 def heap_sort(lst):
+    def heapify(lst, n, index):
+        largest = index
+        child_left = 2 * index + 1
+        child_right = 2 * index + 2
+
+        # check if left child of root exists and is greater than root
+        if child_left < n and lst[largest] < lst[child_left]:
+            largest = child_left
+        # check if right child of root exists and is greater than root
+        if child_right < n and lst[largest] < lst[child_right]:
+            largest = child_right
+        # swap root and continue process if root is not largest
+        if largest != index:
+            lst[index], lst[largest] = lst[largest], lst[index]  # swap
+            heapify(lst, n, largest)
+
     n = len(lst)
     sorted_lst = []
 
